@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" fill="none">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1b2b" />
+      <stop offset="60%" stop-color="#09131f" />
+      <stop offset="100%" stop-color="#060b11" />
+    </linearGradient>
+    <linearGradient id="warm-light" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#060b11" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="skin-tone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b442b" />
+      <stop offset="50%" stop-color="#54331e" />
+      <stop offset="100%" stop-color="#3d2414" />
+    </linearGradient>
+    <linearGradient id="shirt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="table-wood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+    <linearGradient id="sentinel-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="360" height="480" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Overhead Warm Pendant Light Cone (Matching Photo Cafe Lighting) -->
+  <polygon points="180,0 260,180 100,180" fill="url(#warm-light)" />
+  <circle cx="180" cy="18" r="14" fill="#fbbf24" opacity="0.25" />
+  <circle cx="180" cy="18" r="4" fill="#fef3c7" />
+
+  <!-- Window Frame & Night Vegetation in Background -->
+  <line x1="40" y1="30" x2="40" y2="350" stroke="#1e293b" stroke-width="3" />
+  <line x1="320" y1="30" x2="320" y2="350" stroke="#1e293b" stroke-width="3" />
+  <path d="M 40 180 Q 80 140, 110 170" stroke="#065f46" stroke-width="2.5" fill="none" opacity="0.6" />
+  <path d="M 40 150 Q 90 120, 120 155" stroke="#047857" stroke-width="2" fill="none" opacity="0.5" />
+  <path d="M 320 200 Q 280 160, 250 190" stroke="#065f46" stroke-width="2.5" fill="none" opacity="0.6" />
+
+  <!-- Wooden Table Foreground -->
+  <polygon points="0,350 360,350 360,480 0,480" fill="url(#table-wood)" opacity="0.9" />
+  <line x1="0" y1="350" x2="360" y2="350" stroke="#78350f" stroke-width="3" />
+
+  <!-- Table accessories from photo: Small Succulent Plant Pot -->
+  <rect x="35" y="325" width="24" height="25" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5" />
+  <path d="M 47 325 C 40 310, 42 300, 47 295 C 52 300, 54 310, 47 325 Z" fill="#34d399" opacity="0.8" />
+  <path d="M 42 315 C 34 308, 36 300, 42 300" stroke="#10b981" stroke-width="1.5" fill="none" />
+  <path d="M 52 315 C 60 308, 58 300, 52 300" stroke="#10b981" stroke-width="1.5" fill="none" />
+
+  <!-- Smartphone on table from photo -->
+  <rect x="110" y="340" width="32" height="14" rx="3" fill="#cbd5e1" opacity="0.85" />
+
+  <!-- Founder: Mugisha Elaston Sana Silhouette & Features -->
+  <!-- Dark Trousers / Lower Body -->
+  <path d="M 115 350 L 115 480 L 245 480 L 245 350 Z" fill="#090d16" />
+
+  <!-- Torso: Plaid / Checkered Button-Up Shirt (Matching Photo) -->
+  <path d="M 120 260 L 95 350 L 265 350 L 240 260 Z" fill="url(#shirt-grad)" stroke="#94a3b8" stroke-width="1.5" />
+
+  <!-- Plaid Checks on Shirt -->
+  <g stroke="#0284c7" stroke-width="1.2" opacity="0.55">
+    <!-- Vertical Plaid Stripes -->
+    <line x1="140" y1="260" x2="130" y2="350" />
+    <line x1="160" y1="260" x2="155" y2="350" />
+    <line x1="180" y1="260" x2="180" y2="350" stroke="#059669" stroke-width="1.5" />
+    <line x1="200" y1="260" x2="205" y2="350" />
+    <line x1="220" y1="260" x2="230" y2="350" />
+    <!-- Horizontal Plaid Stripes -->
+    <line x1="110" y1="285" x2="250" y2="285" />
+    <line x1="105" y1="310" x2="255" y2="310" stroke="#059669" stroke-width="1.5" />
+    <line x1="98" y1="335" x2="262" y2="335" />
+  </g>
+
+  <!-- Left Arm resting on table -->
+  <path d="M 120 260 L 90 320 L 135 348 L 145 330 Z" fill="url(#shirt-grad)" />
+  <path d="M 135 335 L 145 348" stroke="#0284c7" stroke-width="1" />
+  <!-- Left Hand on Table near phone -->
+  <path d="M 125 342 C 120 342, 115 348, 125 355 C 135 358, 145 352, 140 344 Z" fill="url(#skin-tone)" />
+
+  <!-- Right Arm resting relaxed on table & chair -->
+  <path d="M 240 260 L 275 325 L 235 365 L 220 345 Z" fill="url(#shirt-grad)" />
+  <!-- Right Hand -->
+  <path d="M 220 355 C 215 365, 225 385, 235 375 C 242 368, 235 355, 220 355 Z" fill="url(#skin-tone)" />
+
+  <!-- Shirt Collar & Placket -->
+  <polygon points="180,260 165,242 195,242" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1" />
+  <line x1="180" y1="260" x2="180" y2="350" stroke="#64748b" stroke-width="2" />
+  <circle cx="180" cy="275" r="1.5" fill="#334155" />
+  <circle cx="180" cy="295" r="1.5" fill="#334155" />
+  <circle cx="180" cy="315" r="1.5" fill="#334155" />
+
+  <!-- Neck -->
+  <rect x="170" y="222" width="20" height="24" fill="url(#skin-tone)" rx="3" />
+
+  <!-- Head / Face / Features (Composed, Focused, Thoughtful) -->
+  <ellipse cx="180" cy="180" rx="28" ry="36" fill="url(#skin-tone)" />
+  
+  <!-- Hair: Clean, short, natural style -->
+  <path d="M 152 170 C 150 148, 160 142, 180 142 C 200 142, 210 148, 208 170 C 204 150, 156 150, 152 170 Z" fill="#17120e" />
+
+  <!-- Facial Features -->
+  <!-- Eyebrows -->
+  <path d="M 163 166 Q 170 163 175 166" stroke="#26170d" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M 185 166 Q 190 163 197 166" stroke="#26170d" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Eyes: Deep, focused, thoughtful gaze from photo -->
+  <ellipse cx="169" cy="173" rx="3.5" ry="2" fill="#1c1109" />
+  <circle cx="170" cy="172.5" r="1" fill="#ffffff" />
+  <ellipse cx="191" cy="173" rx="3.5" ry="2" fill="#1c1109" />
+  <circle cx="192" cy="172.5" r="1" fill="#ffffff" />
+
+  <!-- Nose -->
+  <path d="M 180 172 L 178 188 L 183 189" stroke="#3d2414" stroke-width="2" stroke-linecap="round" fill="none" />
+
+  <!-- Lips: Calm, firm, composed expression -->
+  <path d="M 173 199 Q 180 201 187 199" stroke="#381e0f" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Chin contour -->
+  <path d="M 168 206 Q 180 216 192 206" stroke="#2b160b" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6" />
+
+  <!-- Subtle Rim Light on Jawline from Left Night Lighting -->
+  <path d="M 152 180 Q 155 210 175 215" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" fill="none" />
+
+  <!-- Founder Name Badge Overlay -->
+  <g transform="translate(20, 415)">
+    <rect width="320" height="48" rx="8" fill="#081420" stroke="url(#sentinel-glow)" stroke-width="1.5" />
+    <text x="16" y="22" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" letter-spacing="0.04em">MUGISHA ELASTON SANA</text>
+    <text x="16" y="38" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="9.5" letter-spacing="0.02em">FOUNDER &amp; SYSTEMS ARCHITECT · XANICHI</text>
+  </g>
+</svg>

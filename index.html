@@ -109,6 +109,7 @@
           <a href="#problem" class="nav-link">The Problem</a>
           <a href="#solution" class="nav-link">Architecture</a>
           <a href="#ventures" class="nav-link">Ventures</a>
+          <a href="#access-credit" class="nav-link">Access Credit</a>
           <a href="#connection" class="nav-link">Integration</a>
           <a href="#founder" class="nav-link">Founder</a>
           <a href="#partners" class="nav-link">Partners</a>
@@ -141,6 +142,7 @@
         <a href="#problem" class="nav-link">The Problem</a>
         <a href="#solution" class="nav-link">Architecture</a>
         <a href="#ventures" class="nav-link">Ventures</a>
+        <a href="#access-credit" class="nav-link">Access Credit</a>
         <a href="#connection" class="nav-link">Integration</a>
         <a href="#founder" class="nav-link">Founder</a>
         <a href="#partners" class="nav-link">Partners</a>
@@ -465,12 +467,15 @@
                 <p class="venture-card-pitch">
                   Proposed financial technology platform helping individuals, entrepreneurs, and small businesses build structured financial profiles, evaluate credit readiness, and navigate the path to financing with transparent guidance.
                 </p>
-                <div class="venture-card-action">
-                  <button type="button" class="btn-venture-details" data-venture-modal="accesscredit">
-                    <span>Explore credit platform</span>
+                <div class="venture-card-action" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                  <a href="#access-credit" class="btn-venture-details" style="text-decoration:none;">
+                    <span>Explore Credit Passport</span>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
+                  </a>
+                  <button type="button" class="btn-venture-details" data-venture-modal="accesscredit" style="background:transparent; border-color:var(--border-subtle); color:var(--text-secondary);">
+                    <span>Platform Overview</span>
                   </button>
                 </div>
               </div>
@@ -593,6 +598,381 @@
       </section>
 
       <!-- ====================================================================
+           5B. SECTION: ACCESS CREDIT — THE CREDIT PASSPORT FOR UNDERSERVED BUSINESSES
+           FinTech Venture Experience: Explainable Financing Readiness & Credit Passport
+           ==================================================================== -->
+      <section class="access-credit-section" id="access-credit" aria-labelledby="ac-main-heading">
+        <div class="section-container">
+          <!-- Header Block -->
+          <div class="ac-hero-block reveal-on-scroll">
+            <div class="ac-badge-pill">
+              <span class="indicator-pulse-dot" style="width:7px; height:7px;" aria-hidden="true"></span>
+              <span>VENTURE FOCUS · PROPOSED FINTECH PLATFORM</span>
+            </div>
+            <p class="ac-tagline">“Your potential deserves a fairer way to be seen.”</p>
+            <h2 id="ac-main-heading" class="ac-main-title">
+              Your business has a story. <span class="gradient-text">Make it visible to finance.</span>
+            </h2>
+            <p class="ac-supporting-text">
+              Access Credit is a proposed platform that helps underserved entrepreneurs and farmers organize their financial records, understand their financing readiness, and explore suitable funding opportunities.
+            </p>
+            <div class="ac-cta-row">
+              <a href="#ac-passport-demo" class="btn-primary">Explore the Credit Passport</a>
+              <a href="#ac-ecosystem-flow" class="btn-secondary">See How It Works</a>
+            </div>
+            <div class="ac-lang-strip">
+              <span>AVAILABLE LOCALIZATIONS:</span>
+              <span class="ac-lang-chip active">English (Official)</span>
+              <span class="ac-lang-chip">Ikinyarwanda (Planned)</span>
+              <span class="ac-lang-chip">Français (Planned)</span>
+            </div>
+          </div>
+
+          <!-- Signature Feature: The Credit Passport Interactive Demo -->
+          <div class="ac-demo-card reveal-on-scroll" id="ac-passport-demo">
+            <div class="ac-demo-controls-header">
+              <div class="ac-control-group">
+                <span class="ac-control-label">SELECT ENTERPRISE PROFILE (SAMPLE SIMULATION)</span>
+                <div class="ac-tabs-bar" role="tablist" aria-label="Simulated Enterprise Profiles">
+                  <button type="button" class="ac-tab-btn active" data-ac-profile="farmer" role="tab" aria-selected="true">
+                    🌾 Agri Smallholder (Horticulture)
+                  </button>
+                  <button type="button" class="ac-tab-btn" data-ac-profile="trader" role="tab" aria-selected="false">
+                    🏪 Urban Youth Merchant (Kigali)
+                  </button>
+                  <button type="button" class="ac-tab-btn" data-ac-profile="clinic" role="tab" aria-selected="false">
+                    🏥 Peri-Urban Health Post
+                  </button>
+                </div>
+              </div>
+
+              <div class="ac-control-group">
+                <span class="ac-control-label">DOCUMENTATION READINESS LEVEL</span>
+                <div class="ac-tabs-bar" role="tablist" aria-label="Documentation Status">
+                  <button type="button" class="ac-tab-btn active" data-ac-status="organized" role="tab" aria-selected="true">
+                    Structured &amp; Documented
+                  </button>
+                  <button type="button" class="ac-tab-btn" data-ac-status="partial" role="tab" aria-selected="false">
+                    Early / Partial Records
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- The Passport Profile Display -->
+            <div class="ac-passport-display">
+              <!-- Left Column: Business Profile, Trading & Cash Flow Metrics -->
+              <div class="ac-passport-left-col">
+                <!-- Enterprise Identity Subcard -->
+                <div class="ac-subcard">
+                  <div class="ac-subcard-header">
+                    <span class="ac-control-label">BUSINESS ACTIVITY &amp; TRADING HISTORY</span>
+                    <span class="stage-tag in-dev" style="font-size:0.7rem;">PROPOSED RECORD</span>
+                  </div>
+                  <div class="ac-profile-badge">
+                    <div class="ac-profile-avatar" id="ac-avatar">JC</div>
+                    <div>
+                      <h4 id="ac-name" style="font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-bottom:0.15rem;">
+                        Jean-Claude Bizimana
+                      </h4>
+                      <p id="ac-sector" style="font-size:0.875rem; color:var(--color-accent-cyan); margin-bottom:0.15rem;">
+                        Horticulture &amp; Vegetable Smallholder
+                      </p>
+                      <p style="font-size:0.78rem; color:var(--text-muted);">
+                        <span id="ac-location">Gasabo Outskirts, Kigali</span> · <span id="ac-history">34 months active continuous cultivation</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Financial Activity & Cash Flow Documentation -->
+                <div class="ac-subcard">
+                  <div class="ac-subcard-header">
+                    <span class="ac-control-label">INCOME, EXPENSES &amp; CASH FLOW DOCUMENTATION</span>
+                    <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--color-accent-emerald);">3-MONTH ROLLING AVG</span>
+                  </div>
+                  <div class="ac-metrics-grid">
+                    <div class="ac-metric-box">
+                      <span class="ac-metric-val" id="ac-val-turnover">1,450,000 RWF</span>
+                      <span class="ac-metric-lbl">Monthly Sales Turnover</span>
+                    </div>
+                    <div class="ac-metric-box">
+                      <span class="ac-metric-val" id="ac-val-surplus" style="color:var(--color-accent-emerald);">+380,000 RWF</span>
+                      <span class="ac-metric-lbl">Est. Operating Surplus</span>
+                    </div>
+                    <div class="ac-metric-box">
+                      <span class="ac-metric-val" id="ac-val-trans">142 verified sales</span>
+                      <span class="ac-metric-lbl">Transaction Inflows</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Available Supporting Documents Subcard -->
+                <div class="ac-subcard">
+                  <div class="ac-subcard-header">
+                    <span class="ac-control-label">AVAILABLE SUPPORTING DOCUMENTS</span>
+                    <span style="font-size:0.7rem; color:var(--color-accent-emerald); font-family:var(--font-mono);">VERIFIED EVIDENCE</span>
+                  </div>
+                  <ul class="ac-checklist-list" id="ac-docs-list" style="list-style:none;">
+                    <!-- Populated dynamically via JS -->
+                  </ul>
+                </div>
+
+                <!-- Missing Information & Next Steps Subcard -->
+                <div class="ac-subcard" style="border-color: rgba(239, 68, 68, 0.2);">
+                  <div class="ac-subcard-header">
+                    <span class="ac-control-label" style="color:#f87171;">MISSING INFORMATION &amp; RECOMMENDED NEXT STEPS</span>
+                    <span style="font-size:0.7rem; color:#f87171; font-family:var(--font-mono);">GUIDED ACTION</span>
+                  </div>
+                  <ul class="ac-checklist-list" id="ac-missing-list" style="list-style:none;">
+                    <!-- Populated dynamically via JS -->
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Right Column: Transparent Financing-Readiness Checklist -->
+              <div class="ac-passport-right-col">
+                <div class="ac-subcard" style="height:100%;">
+                  <div class="ac-subcard-header">
+                    <span class="ac-control-label">TRANSPARENT FINANCING-READINESS CHECKLIST</span>
+                    <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--color-accent-cyan);">EXPLAINABLE EVALUATION</span>
+                  </div>
+                  <p style="font-size:0.8125rem; color:var(--text-secondary); margin-bottom:1.25rem; line-height:1.5;">
+                    Instead of a mysterious credit score, lenders assess structured, explainable criteria. Here is how each documented factor is understood:
+                  </p>
+                  <div class="ac-checklist-list" id="ac-checklist-container">
+                    <!-- Populated dynamically via JS -->
+                  </div>
+
+                  <!-- Regulatory & Responsible Borrowing Notice -->
+                  <div class="ac-disclaimer-banner">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; color:var(--color-accent-cyan);" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="12" y1="8" x2="12" y2="12"/>
+                      <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    <span>
+                      <strong>Demonstration Notice:</strong> Fictional sample data shown for conceptual illustration. Access Credit does not produce automated lending decisions, guarantee credit approval, or replace institutional underwriting criteria.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section: From productive activity to financing readiness (Ecosystem Loop) -->
+          <div class="ac-pipeline-wrapper reveal-on-scroll" id="ac-ecosystem-flow">
+            <div style="max-width:740px; margin-bottom:2rem;">
+              <span class="section-kicker" style="color:var(--color-accent-cyan);">XANICHI ECOSYSTEM LINKAGE</span>
+              <h3 style="font-family:var(--font-display); font-size:clamp(1.5rem, 2.5vw, 2.1rem); font-weight:700; color:var(--text-primary); margin-top:0.35rem; margin-bottom:0.75rem;">
+                From productive activity to financing readiness
+              </h3>
+              <p style="font-size:0.95rem; color:var(--text-secondary); line-height:1.65;">
+                In traditional banking, informal farmers and micro-enterprises are deemed "invisible" because paper receipts and seasonal biological cycles don't fit standard loan forms. Xanichi bridges this gap: <strong>MY FARM</strong> generates verifiable growing, production, and harvest records; growers voluntarily organize sales evidence; and appropriately verified records help participating lenders understand true agricultural cash flows.
+              </p>
+            </div>
+
+            <!-- Visual Relationship Pipeline -->
+            <div class="ac-pipeline-steps" aria-label="Ecosystem Data Pathway">
+              <!-- Step 1 -->
+              <div class="ac-pipe-step-card">
+                <span class="ac-pipe-num">01 / PRODUCTION</span>
+                <h4 class="ac-pipe-title">MY FARM Cultivation</h4>
+                <p class="ac-pipe-desc">
+                  Bio-bag plantings, IoT soil sensors, and microclimate telemetry log harvest cycles and yield estimates.
+                </p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="ac-pipe-step-card">
+                <span class="ac-pipe-num">02 / RECORDS</span>
+                <h4 class="ac-pipe-title">Farm &amp; Sales Records</h4>
+                <p class="ac-pipe-desc">
+                  Farmer voluntarily logs harvest yields, local market deliveries, and merchant mobile money receipts.
+                </p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="ac-pipe-step-card">
+                <span class="ac-pipe-num">03 / PASSPORT</span>
+                <h4 class="ac-pipe-title">Access Credit Passport</h4>
+                <p class="ac-pipe-desc">
+                  Organizes fragmented evidence into an explainable, structured financing-readiness profile.
+                </p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="ac-pipe-step-card">
+                <span class="ac-pipe-num">04 / DISCOVERY</span>
+                <h4 class="ac-pipe-title">Financing Discovery</h4>
+                <p class="ac-pipe-desc">
+                  Compares transparent working capital, equipment leases, and inventory facilities matching cash-flow realities.
+                </p>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="ac-pipe-step-card">
+                <span class="ac-pipe-num">05 / ASSESSMENT</span>
+                <h4 class="ac-pipe-title">Lender Assessment</h4>
+                <p class="ac-pipe-desc">
+                  Participating SACCOs or micro-lenders assess verified operational evidence for informed underwriting.
+                </p>
+              </div>
+            </div>
+
+            <!-- Ecosystem Proposal Disclosure -->
+            <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:1rem 1.25rem; font-size:0.8125rem; color:var(--text-muted); line-height:1.55;">
+              <strong style="color:var(--text-primary);">Proposed Integration Model:</strong> This represents a conceptual architecture under research. MY FARM does not currently transmit live data to Access Credit, no third-party lenders receive automated data feeds, and no commercial financial institutions have officially endorsed or approved this model. All future data sharing is strictly opt-in, purpose-specific, transparent, and revocable by the user at any time.
+            </div>
+          </div>
+
+          <!-- 4 Signature Platform Modules -->
+          <div class="ac-modules-grid reveal-on-scroll">
+            <!-- Module 1: Readiness Profile Builder -->
+            <div class="ac-module-card">
+              <div class="ac-module-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                </svg>
+              </div>
+              <h3 class="ac-module-title">Readiness Profile Builder</h3>
+              <p class="ac-module-desc">
+                Helps informal micro-businesses compile verifiable trading history, mobile money transaction records, harvest volumes, and supplier receipts into an organized, explainable profile.
+              </p>
+              <ul class="ac-module-list">
+                <li><span>•</span> Guides users step-by-step through standard documentation requirements</li>
+                <li><span>•</span> Formats multi-source inputs into an institution-friendly portfolio</li>
+                <li><span>•</span> Built with lightweight mobile interfaces for low-bandwidth rural connectivity</li>
+              </ul>
+            </div>
+
+            <!-- Module 2: Explainable Assessment Engine -->
+            <div class="ac-module-card">
+              <div class="ac-module-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="m4.93 4.93 4.24 4.24"/>
+                  <path d="m14.83 9.17 4.24-4.24"/>
+                  <path d="m14.83 14.83 4.24 4.24"/>
+                  <path d="m9.17 14.83-4.24 4.24"/>
+                  <circle cx="12" cy="12" r="4"/>
+                </svg>
+              </div>
+              <h3 class="ac-module-title">Explainable Assessment Engine</h3>
+              <p class="ac-module-desc">
+                Evaluates business strengths, cash-flow seasonality, and documentation completeness with plain-language diagnostic feedback rather than opaque black-box credit scores.
+              </p>
+              <ul class="ac-module-list">
+                <li><span>•</span> Highlights concrete factors that make a business credit-ready</li>
+                <li><span>•</span> Identifies document gaps with actionable resolution steps</li>
+                <li><span>•</span> Never outputs arbitrary simulated numbers as real financial decisions</li>
+              </ul>
+            </div>
+
+            <!-- Module 3: Financing Opportunity Explorer -->
+            <div class="ac-module-card">
+              <div class="ac-module-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  <line x1="11" y1="8" x2="11" y2="14"/>
+                  <line x1="8" y1="11" x2="14" y2="11"/>
+                </svg>
+              </div>
+              <h3 class="ac-module-title">Financing Opportunity Explorer</h3>
+              <p class="ac-module-desc">
+                Enables users to discover and compare relevant financing pathways—including micro-loans, agricultural working capital, asset finance, and cooperative facilities—matching their profile.
+              </p>
+              <ul class="ac-module-list">
+                <li><span>•</span> Clear comparison of eligibility criteria, repayment cadences, and collateral expectations</li>
+                <li><span>•</span> Educational focus preventing predatory high-cost borrowing</li>
+                <li><span>•</span> Empowers borrowers to understand terms before committing</li>
+              </ul>
+            </div>
+
+            <!-- Module 4: Privacy & Consent Control Center -->
+            <div class="ac-module-card">
+              <div class="ac-module-icon-wrap" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <h3 class="ac-module-title">Privacy &amp; Consent Control Center</h3>
+              <p class="ac-module-desc">
+                Ensures all data organization and sharing is voluntary, granular, purpose-bound, and fully under the enterprise owner's authority.
+              </p>
+              <ul class="ac-module-list">
+                <li><span>•</span> Users decide which documents are compiled into their profile</li>
+                <li><span>•</span> Explicit authorization required for any prospective lender preview</li>
+                <li><span>•</span> Full revocation rights: permissions can be paused or deleted anytime</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Financing Opportunities Comparison Table (Illustrative Educational Matrix) -->
+          <div class="ac-subcard reveal-on-scroll">
+            <div class="ac-subcard-header">
+              <div>
+                <span class="ac-control-label">FINANCING PATHWAY COMPARISON (EDUCATIONAL PREVIEW)</span>
+                <h4 style="font-family:var(--font-display); font-size:1.15rem; font-weight:700; color:var(--text-primary); margin-top:0.25rem;">
+                  Understanding financing categories before applying
+                </h4>
+              </div>
+              <span class="stage-tag in-dev">Educational Tool</span>
+            </div>
+            <div class="ac-explorer-table-wrap">
+              <table class="ac-explorer-table">
+                <thead>
+                  <tr>
+                    <th>Financing Type</th>
+                    <th>Typical Best Fit</th>
+                    <th>Target Ticket Range</th>
+                    <th>Key Readiness Requirements</th>
+                    <th>Typical Repayment Structure</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:600; color:var(--text-primary);">Seasonal Input Credit</td>
+                    <td>Smallholders buying growing media, seeds &amp; bio-bags</td>
+                    <td>50,000 – 350,000 RWF</td>
+                    <td>Documented planting plan, 2 seasons sales history</td>
+                    <td>Lump-sum post-harvest with monthly grace period</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600; color:var(--text-primary);">Working Capital Line</td>
+                    <td>Youth traders &amp; peri-urban retailers restocking inventory</td>
+                    <td>200,000 – 1,200,000 RWF</td>
+                    <td>3+ months mobile merchant statements, daily turnover records</td>
+                    <td>Weekly or bi-weekly automated deductions</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600; color:var(--text-primary);">Productive Asset Finance</td>
+                    <td>Nurseries acquiring drip-irrigation or solar sensors</td>
+                    <td>500,000 – 3,500,000 RWF</td>
+                    <td>Equipment quotation, 6 months positive operating cash surplus</td>
+                    <td>12–24 month installment schedule; asset serves as security</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:600; color:var(--text-primary);">Cooperative Micro-Facility</td>
+                    <td>Community health posts &amp; agricultural grower groups</td>
+                    <td>1,000,000 – 5,000,000 RWF</td>
+                    <td>Cooperative resolution, joint member liability, activity audit</td>
+                    <td>Structured quarterly disbursements matching clinic/harvest cycles</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
            6. SECTION: IMPACT VISION (Who We Serve)
            ==================================================================== -->
       <section class="section-wrapper" id="impact" aria-labelledby="impact-heading">
@@ -654,37 +1034,45 @@
       <section class="section-wrapper" id="founder" aria-labelledby="founder-heading">
         <div class="section-container">
           <div class="founder-grid reveal-on-scroll">
-            <!-- Portrait Slot (Comment explaining how to swap with real headshot) -->
+            <!-- Portrait Slot with Automatic Fallback -->
             <div class="founder-portrait-card">
               <div class="founder-photo-slot">
-                <!-- Replace with <img src="/assets/img/founder-mugisha.jpg" alt="Mugisha Elaston Sana"> -->
-                <svg viewBox="0 0 300 375" fill="none" style="width:100%; height:100%;">
-                  <rect width="300" height="375" fill="#0b1726"/>
-                  <circle cx="150" cy="130" r="55" fill="#13273e" stroke="#22d3ee" stroke-width="2"/>
-                  <path d="M 60 310 C 60 225, 240 225, 240 310" fill="#13273e" stroke="#34d399" stroke-width="2"/>
-                  <circle cx="150" cy="130" r="16" fill="#34d399" opacity="0.3"/>
-                  <text x="150" y="340" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">MUGISHA ELASTON SANA</text>
-                  <text x="150" y="358" text-anchor="middle" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="10">KIGALI, RWANDA</text>
-                </svg>
+                <!-- Displays real photograph if present, with graceful SVG artistic fallback -->
+                <img src="/assets/img/founder-mugisha.jpg" 
+                     onerror="this.onerror=null; this.src='/assets/img/founder-mugisha.svg';" 
+                     alt="Mugisha Elaston Sana — Founder &amp; Systems Architect, Xanichi Ltd" 
+                     class="founder-photo-img" 
+                     loading="lazy" />
+              </div>
+              <div style="margin-top: 1rem; text-align: center;">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent-cyan); letter-spacing: 0.08em; display: block;">
+                  KIGALI, RWANDA
+                </span>
+                <span style="font-size: 0.8125rem; color: var(--text-muted);">
+                  Health Systems Technologist · Innovator
+                </span>
               </div>
             </div>
 
-            <!-- Founder Bio & Human Catalyst -->
+            <!-- Founder Bio & Professional Context -->
             <div class="founder-bio-card">
-              <span class="section-kicker">06. Founder &amp; Origin</span>
+              <span class="section-kicker">06. Leadership &amp; Origin</span>
               <h2 id="founder-heading" class="founder-name">Mugisha Elaston Sana</h2>
-              <span class="founder-title-role">Founder, Xanichi Ltd · First-Year Nursing Student</span>
+              <span class="founder-title-role">Founder &amp; Systems Architect, Xanichi Ltd · Nursing Scholar &amp; Health Technologist</span>
 
               <div class="founder-quote">
-                “In 2012, my father suffered a severe workplace accident. Witnessing the fragility of urgent care and the agonizing gaps in vital monitoring firsthand didn’t just leave a mark—it charted my entire life course toward healthcare and predictive technology.”
+                “In 2012, my father suffered a severe workplace accident in Rwanda. Witnessing the sudden fragility of urgent care and the critical telemetry blind spots in our clinics didn’t just leave an impression—it forged a lifelong mission to engineer predictive systems that detect crisis before it arrives.”
               </div>
 
               <div class="founder-narrative">
                 <p>
-                  As a first-year nursing student based in Kigali, I examine healthcare and agriculture not through abstract corporate frameworks, but through the real human realities of Rwandan communities.
+                  As a first-year nursing student based in Kigali, Mugisha approaches technology development not through distant theoretical abstractions, but directly from the clinical ward and primary health post floor. His dual immersion in patient care and edge computation provides a distinct advantage: designing diagnostic hardware and AI models that respect the rugged, low-bandwidth constraints of sub-Saharan Africa.
                 </p>
                 <p>
-                  Late detection is a structural failure. When an expectant mother decompensates silently in a rural health post, or when a smallholder loses a full harvest to an unexpected soil acidification shift, the tragedy was preventable. Xanichi was born to build the missing sensory and computational infrastructure that turns reactive regret into predictive prevention.
+                  Recognizing that epidemic vectors, soil degradation, maternal health, and economic barriers share common systemic vulnerabilities, Mugisha established Xanichi as a unified holding ecosystem. Under his guidance, four targeted ventures operate in synergy: <strong>SANA</strong> (solar edge-AI vector telemetry), <strong>MY FARM</strong> (biodegradable growing media and soil AI), <strong>MY HEALTH / LIFE SUIT</strong> (continuous wearable vital monitoring), and <strong>ACCESS CREDIT</strong> (explainable credit readiness for unbanked entrepreneurs).
+                </p>
+                <p>
+                  From earning distinction at the <em>Harvard Health Systems Innovation Lab Hackathon (Kigali Hub)</em> to being selected among the <em>Innovate Africa 20</em> cohort, Mugisha represents a new generation of Rwandan inventors—deeply rooted in community service, scientifically disciplined, and committed to shifting the African continent from reactive crisis response to predictive prevention.
                 </p>
               </div>
             </div>
@@ -692,11 +1080,11 @@
 
           <!-- Clean Achievements Strip -->
           <div class="achievements-strip reveal-on-scroll">
-            <span class="achievements-label">Leadership &amp; Innovation Milestones</span>
+            <span class="achievements-label">Leadership, Clinical &amp; Innovation Milestones</span>
             <div class="achievements-grid">
               <div class="achievement-item">
                 <h3 class="achievement-title">Harvard Health Systems Innovation Lab</h3>
-                <span class="achievement-meta">Hackathon Finalist · Kigali Hub</span>
+                <span class="achievement-meta">Hackathon Finalist &amp; Health Systems Fellow · Kigali Hub</span>
               </div>
               <div class="achievement-item">
                 <h3 class="achievement-title">Innovate Africa 20</h3>
@@ -704,19 +1092,19 @@
               </div>
               <div class="achievement-item">
                 <h3 class="achievement-title">Biogenesis Olympiad</h3>
-                <span class="achievement-meta">Biological &amp; Life Sciences Recognition</span>
+                <span class="achievement-meta">Biological &amp; Life Sciences Distinction</span>
               </div>
               <div class="achievement-item">
                 <h3 class="achievement-title">Maxwell Foundation</h3>
-                <span class="achievement-meta">Leadership Development Training</span>
+                <span class="achievement-meta">Executive Leadership &amp; Ethical Governance Training</span>
               </div>
               <div class="achievement-item">
                 <h3 class="achievement-title">Wavumbuzi Entrepreneurship Program</h3>
                 <span class="achievement-meta">East African Venture &amp; Innovation Fellow</span>
               </div>
               <div class="achievement-item">
-                <h3 class="achievement-title">HP LIFE &amp; Digital AI Credentials</h3>
-                <span class="achievement-meta">Verified Business &amp; Emerging Tech Certifications</span>
+                <h3 class="achievement-title">HP LIFE &amp; Applied AI Credentials</h3>
+                <span class="achievement-meta">Certified Emerging Technologies &amp; Venture Strategy</span>
               </div>
             </div>
           </div>
@@ -896,7 +1284,7 @@
             <a href="#ventures">SANA</a>
             <a href="#ventures">MY FARM</a>
             <a href="#ventures">LIFE SUIT</a>
-            <a href="#ventures">ACCESS CREDIT</a>
+            <a href="#access-credit">ACCESS CREDIT</a>
             <a href="#founder">Founder</a>
             <a href="#contact">Contact</a>
           </div>

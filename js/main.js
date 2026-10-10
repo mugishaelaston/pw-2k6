@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCursorGlow();
   initBackToTop();
   initMobileNav();
+  initAccessCreditDemo();
 });
 
 // ----------------------------------------------------------------------------
@@ -621,33 +622,35 @@ function initVentureModals() {
       `
     },
     accesscredit: {
-      title: "ACCESS CREDIT",
+      title: "ACCESS CREDIT — THE CREDIT PASSPORT FOR UNDERSERVED BUSINESSES",
       stage: "Proposed Platform · Financial Technology",
       html: `
         <div style="margin-bottom: 1.25rem;">
           <p style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--color-accent-emerald); margin-bottom: 0.5rem;">
-            “Your potential deserves a fairer way to be seen.”
+            “Your business has a story. Make it visible to finance.”
           </p>
           <p class="section-description" style="font-size: 0.95rem;">
-            A proposed financial technology platform designed to help individuals, entrepreneurs, and small businesses navigate the path to financing.
+            Access Credit is a proposed platform that helps underserved entrepreneurs and farmers organize their financial records, understand their financing readiness, and explore suitable funding opportunities.
           </p>
         </div>
         <div style="display: flex; flex-direction: column; gap: 1.15rem; font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65;">
           <p>
-            Instead of focusing only on loan applications, Access Credit aims to help users build a structured financial profile, understand their credit readiness, identify gaps in their documentation, and explore suitable financing opportunities.
-          </p>
-          <p>
-            Through an explainable readiness assessment, personalized financial guidance, and transparent comparisons of financing options, Access Credit seeks to make the journey toward responsible borrowing clearer and more accessible.
+            Instead of focusing only on conventional loan applications or opaque credit scores, the platform helps users build a structured financial profile, understand their credit readiness, identify gaps in their documentation, and explore suitable financing opportunities with transparent guidance.
           </p>
           <div style="background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 0.75rem;">
             <div>
-              <strong style="color: var(--color-accent-cyan); display: block; font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;">Mission:</strong>
-              <span style="color: var(--text-primary); font-size: 0.9rem;">Make the journey to responsible financing clearer, more transparent, and more inclusive.</span>
+              <strong style="color: var(--color-accent-cyan); display: block; font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;">Core Differentiator:</strong>
+              <span style="color: var(--text-primary); font-size: 0.9rem;">Helping farmers, entrepreneurs, and small businesses organize evidence of their financial activity into a transparent, explainable financing-readiness profile.</span>
             </div>
             <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
-              <strong style="color: var(--color-accent-emerald); display: block; font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;">Vision:</strong>
-              <span style="color: var(--text-primary); font-size: 0.9rem;">A future where viable individuals and businesses can better demonstrate their financial potential and find appropriate financing opportunities.</span>
+              <strong style="color: var(--color-accent-emerald); display: block; font-size: 0.85rem; font-family: var(--font-mono); letter-spacing: 0.05em; text-transform: uppercase;">Mission &amp; Vision:</strong>
+              <span style="color: var(--text-primary); font-size: 0.9rem;">Make the journey to responsible financing clearer, more transparent, and more inclusive—where viable enterprises can better demonstrate their financial potential.</span>
             </div>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+            <a href="#access-credit" class="btn-primary" onclick="document.getElementById('venture-modal-backdrop').classList.remove('open'); document.body.style.overflow='';" style="font-size:0.85rem; padding:0.6rem 1.2rem;">
+              Open Full Credit Passport Experience
+            </a>
           </div>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">
             Synergy with Xanichi Ecosystem: Integrates agricultural output records from MY FARM and verified community operational data to help smallholders and youth entrepreneurs build verified financial readiness profiles.
@@ -885,4 +888,503 @@ function initMobileNav() {
       toggleBtn.setAttribute('aria-expanded', 'false');
     });
   });
+}
+
+// ----------------------------------------------------------------------------
+// 18. ACCESS CREDIT — THE CREDIT PASSPORT INTERACTIVE ENGINE
+// Client-side illustrative simulation with safe fictional sample data
+// ----------------------------------------------------------------------------
+function initAccessCreditDemo() {
+  const profileTabs = document.querySelectorAll('[data-ac-profile]');
+  const statusTabs = document.querySelectorAll('[data-ac-status]');
+
+  if (!profileTabs.length || !statusTabs.length) return;
+
+  let currentProfile = 'farmer';
+  let currentStatus = 'organized';
+
+  const demoData = {
+    farmer: {
+      initials: "JC",
+      name: "Jean-Claude Bizimana",
+      sector: "Horticulture & Vegetable Smallholder",
+      location: "Gasabo Outskirts, Kigali",
+      history: "34 months active continuous cultivation",
+      data: {
+        organized: {
+          turnover: "1,450,000 RWF",
+          surplus: "+380,000 RWF",
+          transactions: "142 verified sales",
+          docs: [
+            "6-Month MoMo Merchant trading statements (Digital)",
+            "Kigali wholesale market delivery receipts (Signed)",
+            "MY FARM organic media purchase records (Verified)",
+            "National ID & local cooperative membership card"
+          ],
+          missing: [
+            "Quarterly equipment maintenance logbook",
+            "Formal district business activity registration slip"
+          ],
+          checklist: [
+            {
+              title: "Trading Consistency (3+ Seasons)",
+              status: "ready",
+              badge: "Verified",
+              why: "Demonstrates cyclical resilience across both rainy and dry seasons in East Africa."
+            },
+            {
+              title: "Cash Flow Traceability",
+              status: "ready",
+              badge: "High Visibility",
+              why: "Digital merchant statements provide empirical proof of revenue inflows and sales frequency."
+            },
+            {
+              title: "Debt Capacity Cushion (> 2.5x Repayment)",
+              status: "ready",
+              badge: "Documented",
+              why: "Average monthly operating surplus exceeds standard seasonal micro-facility installments."
+            },
+            {
+              title: "Formal Registration Documentation",
+              status: "progress",
+              badge: "In Progress",
+              why: "Lenders require standardized identification to open formal commercial micro-credit files."
+            }
+          ]
+        },
+        partial: {
+          turnover: "780,000 RWF",
+          surplus: "+190,000 RWF",
+          transactions: "54 recorded sales",
+          docs: [
+            "Handwritten paper sales ledger (2 seasons)",
+            "Occasional mobile-money payment screenshots",
+            "Cooperative harvest drop-off slips"
+          ],
+          missing: [
+            "Continuous 90-day digitized transaction statement",
+            "Expense receipts for seed, fertilizer, and transport",
+            "Separated personal vs business cash accounts"
+          ],
+          checklist: [
+            {
+              title: "Trading Consistency (3+ Seasons)",
+              status: "ready",
+              badge: "Satisfied",
+              why: "Continuous harvest history confirmed via cooperative drop-off records."
+            },
+            {
+              title: "Cash Flow Traceability",
+              status: "progress",
+              badge: "Partial Records",
+              why: "Paper notebooks show sales volume, but lack independent third-party timestamps."
+            },
+            {
+              title: "Debt Capacity Cushion (> 2.5x Repayment)",
+              status: "progress",
+              badge: "Moderate Cushion",
+              why: "Documented surplus can service small input advances, but lacks formal expense tracking."
+            },
+            {
+              title: "Input & Supplier Verification",
+              status: "action",
+              badge: "Needs Action",
+              why: "Consolidating input costs helps lenders verify actual farm profitability margins."
+            }
+          ]
+        },
+        limited: {
+          turnover: "320,000 RWF",
+          surplus: "+75,000 RWF",
+          transactions: "18 recorded slips",
+          docs: [
+            "Informal harvest receipt notebook",
+            "National ID card"
+          ],
+          missing: [
+            "Consolidated sales ledger for the last 6 months",
+            "Digital payment history (MoMo or bank)",
+            "Written buyer agreements or cooperative records"
+          ],
+          checklist: [
+            {
+              title: "Trading Consistency (3+ Seasons)",
+              status: "progress",
+              badge: "Needs History",
+              why: "Active farming is taking place, but requires 60 additional days of organized logging."
+            },
+            {
+              title: "Cash Flow Traceability",
+              status: "action",
+              badge: "Cash-Dominant",
+              why: "Informal cash payments leave no auditable trail for participating credit institutions."
+            },
+            {
+              title: "Documented Operating Margin",
+              status: "action",
+              badge: "Unverified",
+              why: "Separating farm operating costs from household spending is the essential first step."
+            },
+            {
+              title: "Preparation Action Plan",
+              status: "action",
+              badge: "Roadmap Active",
+              why: "Use the Access Credit 30-Day Starter Template to begin weekly digital sales logging."
+            }
+          ]
+        }
+      }
+    },
+    business: {
+      initials: "MU",
+      name: "Marie Uwase",
+      sector: "Agro-Input & Retail Grocery Shop",
+      location: "Kicukiro Commercial Center",
+      history: "28 months registered small shop operation",
+      data: {
+        organized: {
+          turnover: "2,850,000 RWF",
+          surplus: "+640,000 RWF",
+          transactions: "310 merchant payments",
+          docs: [
+            "Official Merchant Code (PayPack/MoMo) 6-month log",
+            "Wholesale distributor inventory invoices",
+            "District trade license & RRA TIN certificate",
+            "Physical shop tenancy lease agreement"
+          ],
+          missing: [
+            "Consolidated annual stock inventory balance sheet"
+          ],
+          checklist: [
+            {
+              title: "Verified Merchant Turn-over",
+              status: "ready",
+              badge: "Strong History",
+              why: "Consistently documented retail velocity demonstrates stable daily consumer foot traffic."
+            },
+            {
+              title: "Regulatory & Tax Compliance",
+              status: "ready",
+              badge: "Documented",
+              why: "Active TIN and district permits allow access to structured formal SME products."
+            },
+            {
+              title: "Operating Working Capital Buffer",
+              status: "ready",
+              badge: "Healthy Surplus",
+              why: "Net monthly trading surplus comfortably services inventory restocking facilities."
+            },
+            {
+              title: "Inventory Auditing Log",
+              status: "progress",
+              badge: "In Progress",
+              why: "Tracking seasonal inventory turnover cycles helps lenders customize facility tenure."
+            }
+          ]
+        },
+        partial: {
+          turnover: "1,200,000 RWF",
+          surplus: "+280,000 RWF",
+          transactions: "92 transactions",
+          docs: [
+            "Recent 60-day mobile money transaction records",
+            "Distributor supply receipts (paper)",
+            "District trade permit"
+          ],
+          missing: [
+            "Separated merchant vs personal mobile wallet",
+            "Inventory restocking receipts for previous quarter"
+          ],
+          checklist: [
+            {
+              title: "Trading Presence",
+              status: "ready",
+              badge: "Established",
+              why: "Physical retail location with consistent local customer base established over 12+ months."
+            },
+            {
+              title: "Account Segregation",
+              status: "progress",
+              badge: "Mixed Accounts",
+              why: "Separating personal household transfers from shop sales clarifies net retail margin."
+            },
+            {
+              title: "Supplier Verification",
+              status: "progress",
+              badge: "Partial Invoices",
+              why: "Documenting distributor credit terms demonstrates prompt repayment history."
+            },
+            {
+              title: "Stock Reorder Log",
+              status: "action",
+              badge: "Needs Action",
+              why: "A basic bi-weekly reorder register shows working capital turn-around speed."
+            }
+          ]
+        },
+        limited: {
+          turnover: "450,000 RWF",
+          surplus: "+95,000 RWF",
+          transactions: "22 cash notes",
+          docs: [
+            "Shop notebook counter book",
+            "National ID"
+          ],
+          missing: [
+            "Digital transaction logs",
+            "Formal district trade permit",
+            "Supplier invoices"
+          ],
+          checklist: [
+            {
+              title: "Trading Presence",
+              status: "progress",
+              badge: "Operating",
+              why: "Retail stall is active, but sales velocity is not captured in an auditable ledger."
+            },
+            {
+              title: "Payment Digitization",
+              status: "action",
+              badge: "Needs MoMo Code",
+              why: "Activating a dedicated MoMo merchant code will create instant digital trading proof."
+            },
+            {
+              title: "Documentation Organization",
+              status: "action",
+              badge: "Needs Action",
+              why: "Filing wholesale distributor purchase slips provides formal inventory evidence."
+            },
+            {
+              title: "Credit Readiness Roadmap",
+              status: "action",
+              badge: "Phase 1 Active",
+              why: "Follow our 60-day digital onboarding guide to become eligible for initial micro-lines."
+            }
+          ]
+        }
+      }
+    },
+    entrepreneur: {
+      initials: "PM",
+      name: "Patrick Mugabo",
+      sector: "Eco-Packaging & Nursery Seedlings",
+      location: "Gisozi Youth Innovation Hub, Kigali",
+      history: "16 months emerging enterprise growth",
+      data: {
+        organized: {
+          turnover: "1,980,000 RWF",
+          surplus: "+490,000 RWF",
+          transactions: "88 business invoices",
+          docs: [
+            "Business mobile money merchant records",
+            "Contract purchase orders from urban nurseries",
+            "Equipment asset ownership invoices",
+            "National ID & RDB company registration certificate"
+          ],
+          missing: [
+            "Historical tax clearance certificate"
+          ],
+          checklist: [
+            {
+              title: "Formal Business Registration (RDB)",
+              status: "ready",
+              badge: "Registered",
+              why: "Establishes institutional legal identity for business borrowing and grant matching."
+            },
+            {
+              title: "Contract Commercial Traction",
+              status: "ready",
+              badge: "Recurring Clients",
+              why: "Signed purchase agreements with local nursery clients prove ongoing market demand."
+            },
+            {
+              title: "Cash Flow Visibility",
+              status: "ready",
+              badge: "Auditable",
+              why: "Bank and merchant transfer statements match billed commercial invoices."
+            },
+            {
+              title: "Working Capital Scaling Plan",
+              status: "progress",
+              badge: "In Progress",
+              why: "Detailed quotation for raw materials (biodegradable fibers) required for facility expansion."
+            }
+          ]
+        },
+        partial: {
+          turnover: "890,000 RWF",
+          surplus: "+210,000 RWF",
+          transactions: "35 invoices",
+          docs: [
+            "Digital invoice copies (PDFs)",
+            "RDB incorporation certificate",
+            "Personal mobile money logs"
+          ],
+          missing: [
+            "Dedicated enterprise corporate bank / merchant account",
+            "Supplier terms agreement"
+          ],
+          checklist: [
+            {
+              title: "Legal Formation",
+              status: "ready",
+              badge: "Verified",
+              why: "Incorporation documents on file establishing corporate legal standing."
+            },
+            {
+              title: "Commercial Cash Flow",
+              status: "progress",
+              badge: "Personal Wallet",
+              why: "Commercial income flowing through personal accounts slows verification review."
+            },
+            {
+              title: "Invoice Settlement Verification",
+              status: "progress",
+              badge: "Pending Receipts",
+              why: "Matching delivery acceptance slips with received payments closes the audit loop."
+            },
+            {
+              title: "Asset Ledger",
+              status: "action",
+              badge: "Needs Action",
+              why: "Documenting production machinery value establishes baseline enterprise equity."
+            }
+          ]
+        },
+        limited: {
+          turnover: "380,000 RWF",
+          surplus: "+80,000 RWF",
+          transactions: "12 payments",
+          docs: [
+            "National ID",
+            "Prototype design specification portfolio"
+          ],
+          missing: [
+            "Commercial sales history (> 6 months)",
+            "Formal RDB registration",
+            "Commercial banking log"
+          ],
+          checklist: [
+            {
+              title: "Product Viability",
+              status: "ready",
+              badge: "Prototyped",
+              why: "Technical prototype and product concept demonstrated in the field."
+            },
+            {
+              title: "Commercial Trading History",
+              status: "action",
+              badge: "Early Stage",
+              why: "Lenders require at least 90 days of commercial market trading transactions."
+            },
+            {
+              title: "Financial Separation",
+              status: "action",
+              badge: "Unseparated",
+              why: "Establish an independent business account before applying for working facilities."
+            },
+            {
+              title: "Next Preparation Milestone",
+              status: "action",
+              badge: "Incubation Phase",
+              why: "Focus on closing 10 pilot client sales and logging payment vouchers over 60 days."
+            }
+          ]
+        }
+      }
+    }
+  };
+
+  function renderPassport() {
+    const profile = demoData[currentProfile];
+    const statusData = profile.data[currentStatus];
+
+    // Profile info
+    const avatarEl = document.getElementById('ac-avatar');
+    const nameEl = document.getElementById('ac-name');
+    const sectorEl = document.getElementById('ac-sector');
+    const locationEl = document.getElementById('ac-location');
+    const historyEl = document.getElementById('ac-history');
+
+    if (avatarEl) avatarEl.textContent = profile.initials;
+    if (nameEl) nameEl.textContent = profile.name;
+    if (sectorEl) sectorEl.textContent = profile.sector;
+    if (locationEl) locationEl.textContent = profile.location;
+    if (historyEl) historyEl.textContent = profile.history;
+
+    // Metric counters
+    const turnoverEl = document.getElementById('ac-val-turnover');
+    const surplusEl = document.getElementById('ac-val-surplus');
+    const transEl = document.getElementById('ac-val-trans');
+
+    if (turnoverEl) turnoverEl.textContent = statusData.turnover;
+    if (surplusEl) surplusEl.textContent = statusData.surplus;
+    if (transEl) transEl.textContent = statusData.transactions;
+
+    // Supporting docs list
+    const docsContainer = document.getElementById('ac-docs-list');
+    if (docsContainer) {
+      docsContainer.innerHTML = statusData.docs.map(doc => `
+        <li style="display:flex; align-items:flex-start; gap:0.55rem; font-size:0.8125rem; color:var(--text-secondary);">
+          <span style="color:var(--color-accent-emerald); font-weight:bold; flex-shrink:0;">✓</span>
+          <span>${doc}</span>
+        </li>
+      `).join('');
+    }
+
+    // Missing information list
+    const missingContainer = document.getElementById('ac-missing-list');
+    if (missingContainer) {
+      missingContainer.innerHTML = statusData.missing.map(item => `
+        <li style="display:flex; align-items:flex-start; gap:0.55rem; font-size:0.8125rem; color:#f87171;">
+          <span style="flex-shrink:0;">!</span>
+          <span>${item}</span>
+        </li>
+      `).join('');
+    }
+
+    // Checklist items
+    const checklistContainer = document.getElementById('ac-checklist-container');
+    if (checklistContainer) {
+      checklistContainer.innerHTML = statusData.checklist.map(item => `
+        <div class="ac-check-item">
+          <div class="ac-check-status-icon ${item.status}" aria-hidden="true">
+            ${item.status === 'ready' ? '✓' : item.status === 'progress' ? '◐' : '○'}
+          </div>
+          <div class="ac-check-text-wrap">
+            <div class="ac-check-title-row">
+              <span class="ac-check-title">${item.title}</span>
+              <span class="ac-why-tag">${item.badge}</span>
+            </div>
+            <p class="ac-check-why">
+              <strong>Why lenders evaluate this:</strong> ${item.why}
+            </p>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  // Profile tabs event listeners
+  profileTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      profileTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentProfile = tab.getAttribute('data-ac-profile');
+      renderPassport();
+    });
+  });
+
+  // Status tabs event listeners
+  statusTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      statusTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      currentStatus = tab.getAttribute('data-ac-status');
+      renderPassport();
+    });
+  });
+
+  // Initial render
+  renderPassport();
 }
