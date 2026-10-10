@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="mark-hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <linearGradient id="mark-x-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(10, 5)">
+    <!-- Hexagon Frame -->
+    <polygon points="70,10 126,42 126,106 70,138 14,106 14,42" 
+             stroke="url(#mark-hex-grad)" 
+             stroke-width="7" 
+             stroke-linejoin="round" 
+             fill="none" />
+    
+    <!-- Vertex Nodes -->
+    <circle cx="70" cy="10" r="5.5" fill="#34d399" />
+    <circle cx="70" cy="138" r="5.5" fill="#22d3ee" />
+
+    <!-- Concentric Sensor Aura -->
+    <circle cx="70" cy="74" r="22" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="2" fill="none" />
+
+    <!-- Crossbar X -->
+    <line x1="42" y1="46" x2="98" y2="102" stroke="url(#mark-x-grad)" stroke-width="13" stroke-linecap="round" />
+    <line x1="98" y1="46" x2="42" y2="102" stroke="url(#mark-x-grad)" stroke-width="13" stroke-linecap="round" />
+
+    <!-- Center Sentinel Eye -->
+    <circle cx="70" cy="74" r="7.5" fill="#060b11" stroke="#ffffff" stroke-width="3.5" />
+  </g>
+</svg>

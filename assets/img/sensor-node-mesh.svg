@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none">
+  <defs>
+    <linearGradient id="sn-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <linearGradient id="sn-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1f32" />
+      <stop offset="100%" stop-color="#07121e" />
+    </linearGradient>
+    <linearGradient id="sn-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#0f2338" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="320" height="220" rx="16" fill="url(#sn-card)" stroke="#1e3a5a" stroke-width="1.5" />
+
+  <!-- Field Terrain Lines -->
+  <path d="M 0 175 Q 80 155, 160 170 T 320 160 L 320 220 L 0 220 Z" fill="#081827" />
+  <path d="M 0 190 Q 90 175, 180 190 T 320 182 L 320 220 L 0 220 Z" fill="#05101a" opacity="0.8" />
+
+  <!-- Radiating Sensor Waves -->
+  <circle cx="160" cy="70" r="35" stroke="#22d3ee" stroke-opacity="0.25" stroke-dasharray="4 4" fill="none" />
+  <circle cx="160" cy="70" r="55" stroke="#34d399" stroke-opacity="0.18" stroke-dasharray="5 5" fill="none" />
+  <circle cx="160" cy="70" r="75" stroke="#22d3ee" stroke-opacity="0.10" stroke-dasharray="6 6" fill="none" />
+
+  <!-- Antenna Mast -->
+  <line x1="160" y1="50" x2="160" y2="155" stroke="#94a3b8" stroke-width="3" stroke-linecap="round" />
+  <circle cx="160" cy="46" r="4.5" fill="#34d399" />
+  <circle cx="160" cy="46" r="8" stroke="#34d399" stroke-opacity="0.6" stroke-width="1.5" fill="none" />
+
+  <!-- Photovoltaic Solar Mini Panel -->
+  <polygon points="125,75 195,75 180,95 110,95" fill="url(#sn-panel)" stroke="url(#sn-grad)" stroke-width="1.5" />
+  <line x1="147" y1="75" x2="133" y2="95" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4" />
+  <line x1="172" y1="75" x2="158" y2="95" stroke="#22d3ee" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- Weather-sealed Edge-AI Enclosure -->
+  <rect x="142" y="102" width="36" height="42" rx="5" fill="#13273d" stroke="#22d3ee" stroke-width="1.5" />
+  <!-- Microcontroller Chip Symbol -->
+  <rect x="151" y="112" width="18" height="18" rx="2" fill="#0a1624" stroke="#34d399" stroke-width="1" />
+  <circle cx="160" cy="121" r="3" fill="#22d3ee" />
+
+  <!-- Ground Stake Anchor -->
+  <line x1="160" y1="155" x2="160" y2="200" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Soil Sensor Probes into ground -->
+  <path d="M 160 144 Q 135 155, 130 185" stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 3" fill="none" />
+  <circle cx="130" cy="185" r="3" fill="#34d399" />
+  <path d="M 160 144 Q 185 155, 190 190" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="3 3" fill="none" />
+  <circle cx="190" cy="190" r="3" fill="#22d3ee" />
+
+  <!-- Label badge -->
+  <rect x="16" y="16" width="112" height="24" rx="6" fill="#081420" stroke="#1f3b56" stroke-width="1" />
+  <text x="24" y="32" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" letter-spacing="0.05em">SANA EDGE NODE</text>
+</svg>

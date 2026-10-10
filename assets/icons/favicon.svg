@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="fav-hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <linearGradient id="fav-x-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+  </defs>
+  <!-- Background Sentinel Hexagon -->
+  <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" 
+           stroke="url(#fav-hex-grad)" 
+           stroke-width="5" 
+           stroke-linejoin="round" 
+           fill="#07111c" />
+  <!-- Vertex Sentinel Dots -->
+  <circle cx="50" cy="6" r="4" fill="#34d399" />
+  <circle cx="50" cy="94" r="4" fill="#22d3ee" />
+  <!-- Central Sentinel Ring -->
+  <circle cx="50" cy="50" r="14" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1.5" fill="none" />
+  <!-- 'X' Bars -->
+  <line x1="31" y1="31" x2="69" y2="69" stroke="url(#fav-x-grad)" stroke-width="9" stroke-linecap="round" />
+  <line x1="69" y1="31" x2="31" y2="69" stroke="url(#fav-x-grad)" stroke-width="9" stroke-linecap="round" />
+  <!-- Core Pupil -->
+  <circle cx="50" cy="50" r="5" fill="#07111c" stroke="#ffffff" stroke-width="2.5" />
+</svg>

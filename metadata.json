@@ -1,0 +1,6 @@
+{
+  "name": "Xanichi Ltd",
+  "description": "Predictive infrastructure for Africa's farms and clinics. Rwandan holding company and technology developer based in Kigali.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
